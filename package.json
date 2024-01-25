@@ -1,6 +1,6 @@
 {
 	"name": "amstramgram-frontend",
-	"version": "0.1.0",
+	"version": "0.2.0",
 	"private": false,
 	"scripts": {
 		"dev": "vite dev",
@@ -34,5 +34,8 @@
 		"vite": "^5.0.3",
 		"vitest": "^1.2.0"
 	},
-	"type": "module"
+	"type": "module",
+	"dependencies": {
+		"@tabler/icons-svelte": "^2.46.0"
+	}
 }
