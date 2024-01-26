@@ -5,8 +5,6 @@
 	export let data: PageData;
 </script>
 
-<h1>Welcome to Amstramgram</h1>
-
 {#if data.posts.length > 0}
 	{#each data.posts as post}
 		<Post data={post} />
