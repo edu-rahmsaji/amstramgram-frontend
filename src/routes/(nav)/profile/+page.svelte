@@ -27,12 +27,12 @@
 <Nav {nickname} />
 <div class="relative w-full flex flex-col items-center p-5 gap-5">
 	<div class="relative w-full h-24 flex justify-between gap-5">
-		<div class="relative h-full flex-grow flex justify-start">
+		<div class="relative h-full w-1/2 flex justify-start">
 			<div class="relative h-full aspect-square rounded-full bg-black">
 				<!-- Avatar here -->
 			</div>
 		</div>
-		<div class="relative h-full flex-grow flex flex-col justify-between">
+		<div class="relative h-full w-1/2 flex flex-col justify-between">
 			<Data icon={PostCount} count={posts.length} text="post(s)" />
 			<Data icon={Followers} count={followers.length} text="follower(s)" />
 			<Data icon={Followed} count={followed.length} text="following" />
