@@ -2,9 +2,9 @@
 	import Link from './Link.svelte';
 	import {
 		IconHome as Home,
-        IconCompass as Explore,
-        IconCirclePlus as AddPost,
-        IconMessage as Messages,
+		IconCompass as Explore,
+		IconCirclePlus as AddPost,
+		IconMessage as Messages,
 		IconUserCircle as UserProfile
 	} from '@tabler/icons-svelte';
 </script>
@@ -22,7 +22,7 @@ Renders a navbar adapted for devices under 1024px wide.
 		<Link href="/" label="Home" icon={Home} />
 		<Link href="/explore" label="Explore" icon={Explore} />
 		<Link href="/posts/add" label="Add a post" icon={AddPost} />
-        <Link href="/messages" label="Messages" icon={Messages} />
+		<Link href="/messages" label="Messages" icon={Messages} />
 		<Link href="/profile" label="Profile" icon={UserProfile} />
 	</ul>
 </nav>

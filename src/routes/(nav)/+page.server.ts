@@ -2,7 +2,7 @@ import { getPosts } from '$mock-db/post';
 import type { PageServerLoad } from './$types';
 
 export const load: PageServerLoad = async () => {
-    /* const postResponse = await fetch("http://localhost:4000/api/posts", { method: "GET" });
+	/* const postResponse = await fetch("http://localhost:4000/api/posts", { method: "GET" });
     const rawPosts: RawPost[] = await postResponse.json();
 
 	const posts: Post[] = [];
@@ -22,6 +22,6 @@ export const load: PageServerLoad = async () => {
 	} */
 
 	return {
-		posts: getPosts(),
+		posts: getPosts()
 	};
 };

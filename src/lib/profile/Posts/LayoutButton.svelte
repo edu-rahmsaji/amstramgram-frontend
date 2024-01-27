@@ -6,5 +6,5 @@
 </script>
 
 <a {href} class="relative flex-grow flex justify-center items-center">
-    <svelte:component this={icon} />
+	<svelte:component this={icon} />
 </a>

@@ -14,7 +14,7 @@
 
 	export let data: PageData;
 
-    onMount(() => {
+	onMount(() => {
 		document.title = 'My Profile - Amstramgram';
 	});
 
@@ -39,6 +39,6 @@
 		</div>
 	</div>
 	<h2 class="font-medium text-gray-500 flex">{first_name} {last_name}</h2>
-    <p class="text-sm text-justify">{biography}</p>
+	<p class="text-sm text-justify">{biography}</p>
 </div>
 <Posts {posts} layout={data.layout} />

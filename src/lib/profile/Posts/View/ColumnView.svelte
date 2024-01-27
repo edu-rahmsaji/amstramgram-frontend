@@ -1,25 +1,22 @@
 <script lang="ts">
 	import type { Post } from '$models/Post';
-    import {
-        IconHeart as Heart,
-        IconBookmark as Bookmark
-    } from "@tabler/icons-svelte";
+	import { IconHeart as Heart, IconBookmark as Bookmark } from '@tabler/icons-svelte';
 
 	export let posts: Post[];
 
-    function dateContent(created_at: Date): string {
-        const today = new Date();
-        const yesterday = today;
-        yesterday.setDate(yesterday.getDate() - 1);
+	function dateContent(created_at: Date): string {
+		const today = new Date();
+		const yesterday = today;
+		yesterday.setDate(yesterday.getDate() - 1);
 
-        if (created_at.toLocaleDateString('fr-CH') === today.toLocaleDateString('fr-CH')) {
-            return `Today at ${created_at.toLocaleTimeString('fr-CH')}`;
-        } else if (created_at.toLocaleDateString('fr-CH') === yesterday.toLocaleDateString('fr-CH')) {
-            return `Yesterday at ${created_at.toLocaleTimeString('fr-CH')}`;
-        } else {
-            return created_at.toLocaleDateString('fr-CH');
-        }
-    }
+		if (created_at.toLocaleDateString('fr-CH') === today.toLocaleDateString('fr-CH')) {
+			return `Today at ${created_at.toLocaleTimeString('fr-CH')}`;
+		} else if (created_at.toLocaleDateString('fr-CH') === yesterday.toLocaleDateString('fr-CH')) {
+			return `Yesterday at ${created_at.toLocaleTimeString('fr-CH')}`;
+		} else {
+			return created_at.toLocaleDateString('fr-CH');
+		}
+	}
 </script>
 
 <div class="relative w-full grid grid-cols-1">

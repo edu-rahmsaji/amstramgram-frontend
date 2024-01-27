@@ -1,7 +1,7 @@
 <script lang="ts">
-    import { IconMenu as Menu } from "@tabler/icons-svelte";
+	import { IconMenu as Menu } from '@tabler/icons-svelte';
 
-    export let nickname: string;
+	export let nickname: string;
 </script>
 
 <!--

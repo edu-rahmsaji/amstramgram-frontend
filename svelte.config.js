@@ -13,9 +13,9 @@ const config = {
 		// See https://kit.svelte.dev/docs/adapters for more information about adapters.
 		adapter: adapter(),
 		alias: {
-			'$models': 'src/models',
+			$models: 'src/models',
 			'$mock-db': 'src/mock-db',
-			'$types': 'src/types'
+			$types: 'src/types'
 		}
 	}
 };
