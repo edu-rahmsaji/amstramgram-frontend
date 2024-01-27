@@ -1,12 +1,13 @@
 {
 	"name": "amstramgram-frontend",
-	"version": "0.7.1",
+	"version": "0.7.2",
 	"author": "Sajidur Rahman",
 	"description": "The frontend of the Amstramgram project.",
 	"private": false,
 	"type": "module",
 	"scripts": {
 		"dev": "vite dev",
+		"dev:expose": "vite --host",
 		"build": "vite build",
 		"preview": "vite preview",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
