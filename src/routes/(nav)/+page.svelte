@@ -11,13 +11,9 @@
 </script>
 
 {#if data.posts.length > 0}
-	<ul class="relative pb-20">
-		{#each data.posts as post}
-			<li>
-				<Post {post} />
-			</li>
-		{/each}
-	</ul>
+	{#each data.posts as post}
+		<Post {post} />
+	{/each}
 {:else}
 	<p>No post has been created yet...</p>
 {/if}
