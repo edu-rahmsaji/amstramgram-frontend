@@ -2,17 +2,17 @@ import type { User } from './User';
 
 export interface RawPost {
 	id: number;
-	creator_id: number;
+	user_id: number;
 	text: string;
-	image_name: string;
-	created_at: Date;
-	updated_at: Date;
+	image_paths: string[];
+	created_at: string;
+	updated_at: string;
 }
 
 export interface Post {
 	id: number;
-	creator: User;
+	user: User;
 	text: string;
-	image_name: string;
-	created_at: Date;
+	imagePaths: string[];
+	createdAt: Date;
 }

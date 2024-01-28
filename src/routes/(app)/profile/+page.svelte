@@ -8,9 +8,7 @@
 	import { onMount } from 'svelte';
 	import { getPosts } from '$mock-db/post';
 	import { getFollowed, getFollowers } from '$mock-db/follows';
-	import Data from '$lib/profile/Data.svelte';
-	import Posts from '$lib/profile/Posts/Posts.svelte';
-	import Nav from '$lib/profile/Nav.svelte';
+	import { Nav, Data, Posts } from '$lib/profile';
 
 	export let data: PageData;
 
@@ -25,7 +23,7 @@
 </script>
 
 <Nav {nickname} />
-<div class="relative w-full flex flex-col items-center p-5 gap-5">
+<div class="relative w-full flex flex-col p-5 gap-5">
 	<div class="relative w-full h-24 flex justify-between gap-5">
 		<div class="relative h-full w-1/2 flex justify-start">
 			<div class="relative h-full aspect-square rounded-full bg-black">
@@ -38,7 +36,7 @@
 			<Data icon={Followed} count={followed.length} text="following" />
 		</div>
 	</div>
-	<h2 class="font-medium text-gray-500 flex">{first_name} {last_name}</h2>
+	<h2 class="font-medium flex">{first_name} {last_name}</h2>
 	<p class="text-sm text-justify">{biography}</p>
 </div>
 <Posts {posts} layout={data.layout} />
