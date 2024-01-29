@@ -10,10 +10,12 @@
 	});
 </script>
 
-{#if data.posts.length > 0}
+{#if !data.posts}
+	<p>Something went wrong. Please try again later.</p>
+{:else if data.posts.length === 0}
+	<p>No post has been created yet...</p>
+{:else}
 	{#each data.posts as post}
 		<Post {post} />
 	{/each}
-{:else}
-	<p>No post has been created yet...</p>
 {/if}
