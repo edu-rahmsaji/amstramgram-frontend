@@ -14,8 +14,8 @@ const config = {
 		adapter: adapter(),
 		alias: {
 			$models: 'src/models',
-			'$mock-db': 'src/mock-db',
-			$types: 'src/types'
+			$types: 'src/types',
+			$server: 'src/server'
 		}
 	}
 };

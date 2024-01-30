@@ -13,36 +13,32 @@
 	onMount(() => {
 		document.title = 'My Profile - Amstramgram';
 	});
-
-	$: ({ user, posts } = data);
-	$: followers = 0;
-	$: followed = 0;
 </script>
 
-{#if !user}
+{#if !data.user}
 	<p>Something went wrong. Please try again later.</p>
 {:else}
-	{@const { nickname, firstName, lastName, biography } = user}
+	{@const { nickname, firstName, lastName, biography } = data.user}
 	<Nav {nickname} />
 	<div class="relative w-full flex flex-col p-5 gap-5">
 		<div class="relative w-full h-24 flex justify-between gap-5">
 			<div class="relative h-full w-1/2 flex justify-start">
-				<div class="relative h-full aspect-square rounded-full bg-black">
+				<div class="relative h-full w- aspect-square rounded-full bg-black">
 					<!-- Avatar here -->
 				</div>
 			</div>
 			<div class="relative h-full w-1/2 flex flex-col justify-between">
-				<Data icon={PostCount} count={posts?.length ?? 0} text="post(s)" />
-				<Data icon={Followers} count={followers} text="follower(s)" />
-				<Data icon={Followed} count={followed} text="following" />
+				<Data icon={PostCount} count={data.posts?.length} text="post(s)" />
+				<Data icon={Followers} count={data.followerCount} text="follower(s)" />
+				<Data icon={Followed} count={data.followedCount} text="following" />
 			</div>
 		</div>
 		<h2 class="font-medium flex">{firstName} {lastName}</h2>
 		<p class="text-sm text-justify">{biography}</p>
 	</div>
-	{#if !posts}
+	{#if !data.posts}
 		<p>Something went wrong. Please try again later.</p>
 	{:else}
-		<Posts {posts} layout={data.layout} />
+		<Posts posts={data.posts} layout={data.layout} />
 	{/if}
 {/if}

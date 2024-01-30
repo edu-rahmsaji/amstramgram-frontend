@@ -1,5 +1,5 @@
 <script lang="ts">
-	import PostComponent from '$lib/Post.svelte';
+	import PostComponent from '$lib/shared/Post/Post.svelte';
 	import type { Post } from '$models/Post';
 
 	export let posts: Post[];
