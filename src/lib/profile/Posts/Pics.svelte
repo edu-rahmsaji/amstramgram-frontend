@@ -9,10 +9,10 @@
 	<p>You haven't posted any pics yet...</p>
 {:else}
 	<div class="relative w-full grid grid-cols-2 gap-[2px]">
-		{#each pics as { imagePaths, text }}
-			<div class="relative w-full aspect-square overflow-y-hidden flex items-center bg-zinc-800">
+		{#each pics as { id, imagePaths, text }}
+			<a href="/posts/{id}" class="relative w-full aspect-square overflow-y-hidden flex items-center bg-zinc-800">
 				<img src="{PUBLIC_BACKEND_URL}/{JSON.parse(imagePaths)[0]}" alt={text} />
-			</div>
+			</a>
 		{/each}
 	</div>
 {/if}

@@ -1,5 +1,5 @@
 <script>
-	import Navbar from '$lib/Navbar/Navbar.svelte';
+	import Navbar from '$lib/shared/Navbar/Navbar.svelte';
 </script>
 
 <div class="relative w-full h-full flex flex-col">
