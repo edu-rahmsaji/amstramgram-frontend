@@ -5,6 +5,7 @@
 	import Actions from './Actions.svelte';
 
 	export let post: Post;
+	$: ({ user, postedAt, text, imagePaths, likes } = post);
 </script>
 
 <!--
@@ -31,7 +32,7 @@ __The third section displays:__
 -->
 
 <div class="relative w-full flex flex-col">
-	<UserData user={post.user} />
-	<Content text={post.text} imagePaths={post.imagePaths} />
-	<Actions />
+	<UserData user={user} postedAt={new Date(postedAt)} />
+	<Content text={text} imagePaths={JSON.parse(imagePaths)} />
+	<Actions likes={likes} />
 </div>

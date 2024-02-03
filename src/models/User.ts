@@ -1,16 +1,4 @@
-export interface RawUser {
-	id: number;
-	nickname: string;
-	is_private: boolean;
-	first_name: string;
-	last_name: string;
-	email: string;
-	biography: string;
-	created_at: string;
-	updated_at: string;
-}
-
-export interface User {
+export type User = {
 	id: number;
 	nickname: string;
 	isPrivate: boolean;
@@ -18,6 +6,18 @@ export interface User {
 	lastName: string;
 	email: string;
 	biography: string;
-	createdAt: Date;
-	updatedAt: Date;
+	meta: {
+		postCount: number;
+		followerCount: number;
+		followingCount: number;
+	};
+	/** A parsable date. */
+	joinedOn: string;
+}
+
+export type SimplifiedUser = {
+	id: number;
+	nickname: string;
+	firstName: string;
+	lastName: string;
 }

@@ -11,11 +11,17 @@
 </script>
 
 {#if !data.posts}
-	<p>Something went wrong. Please try again later.</p>
-{:else if data.posts.length === 0}
-	<p>No post has been created yet...</p>
+	<p>Unable to retrieve the posts. Please try again later.</p>
 {:else}
-	{#each data.posts as post}
-		<Post {post} />
-	{/each}
+	{#await data.posts}
+		<p>Loading the posts...</p>
+	{:then posts}
+		{#each posts as post}
+			<Post {post} />
+		{:else}
+			<p>No post has been created yet...</p>
+		{/each}
+	{:catch}
+		<p>Something went wrong. Please try again later.</p>
+	{/await}
 {/if}

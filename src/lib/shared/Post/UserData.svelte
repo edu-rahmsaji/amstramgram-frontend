@@ -1,7 +1,8 @@
 <script lang="ts">
-	import type { User } from '$models/User';
+	import type { SimplifiedUser } from '$models/User';
 
-	export let user: User | null;
+	export let user: SimplifiedUser | null;
+	export let postedAt: Date;
 
 	function formattedDate(createdAt: Date): string {
 		const difference: number = Math.floor((Date.now() - createdAt.getTime()) / 1000);
@@ -34,7 +35,7 @@
 		</div>
 		<div class="relative flex flex-col items-start justify-between">
 			<p class="font-medium">{user.nickname}</p>
-			<p class="font-medium text-gray-500 text-xs">{formattedDate(user.createdAt)}</p>
+			<p class="font-medium text-gray-500 text-xs">{formattedDate(postedAt)}</p>
 		</div>
 	{/if}
 </div>

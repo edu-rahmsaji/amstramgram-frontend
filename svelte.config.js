@@ -14,7 +14,6 @@ const config = {
 		adapter: adapter(),
 		alias: {
 			$models: 'src/models',
-			$types: 'src/types',
 			$server: 'src/server'
 		}
 	}

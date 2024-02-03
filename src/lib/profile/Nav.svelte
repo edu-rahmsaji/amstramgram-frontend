@@ -1,7 +1,5 @@
 <script lang="ts">
 	import { IconMenu as Menu } from '@tabler/icons-svelte';
-
-	export let nickname: string;
 </script>
 
 <!--
@@ -15,7 +13,6 @@ Displays :
 
 -->
 
-<nav class="relative w-full min-h-[60px] px-5 flex justify-between items-center">
-	<h1>{nickname}</h1>
-	<Menu />
+<nav class="absolute w-full min-h-[60px] px-5 flex justify-end items-center z-50">
+	<Menu class="text-white" />
 </nav>

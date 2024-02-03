@@ -1,19 +1,13 @@
-import type { User } from './User';
-
-export interface RawPost {
-	id: number;
-	user_id: number;
-	text: string;
-	/** A parsable array. */
-	image_paths: string;
-	created_at: string;
-	updated_at: string;
-}
+import type { SimplifiedUser } from "./User";
 
 export interface Post {
 	id: number;
-	user: User | null;
+	/** A simplified version of a user. */
+	user: SimplifiedUser;
 	text: string;
-	imagePaths: string[];
-	createdAt: Date;
+	/** A parsable string array. */
+	imagePaths: string;
+	likes: number;
+	/** A parsable date. */
+	postedAt: string;
 }
