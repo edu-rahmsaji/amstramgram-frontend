@@ -1,7 +1,7 @@
 import type { Handle } from '@sveltejs/kit';
 
 // This allows us to use localhost instead of 127.0.0.1 for undici fetch.
-// https://stackoverflow.com/questions/76552226/accessing-localhost-from-sveltekit-ssr-is-suddenly-broken-after-upgrading-to-nod
+// https://stackoverflow.com/a/76552326
 import dns from "dns";
 dns.setDefaultResultOrder("ipv4first");
 
