@@ -26,16 +26,18 @@
 	}
 </script>
 
-<div class="relative w-full h-20 p-5 flex justify-start items-center gap-5">
+<div class="relative w-full h-20 flex">
 	{#if !user}
 		<p>Unable to show the user's data. Please retry again later.</p>
 	{:else}
-		<div class="relative h-full aspect-square rounded-full bg-black">
-			<!-- Avatar here -->
-		</div>
-		<div class="relative flex flex-col items-start justify-between">
-			<p class="font-medium">{user.nickname}</p>
-			<p class="font-medium text-gray-500 text-xs">{formattedDate(postedAt)}</p>
-		</div>
+		<a href="/profile/{user.id}" class="relative w-full h-full p-5 flex justify-start items-center gap-5 cursor-pointer">
+			<div class="relative h-full aspect-square rounded-full bg-black">
+				<!-- Avatar here -->
+			</div>
+			<div class="relative flex flex-col items-start justify-between">
+				<p class="font-medium">{user.nickname}</p>
+				<p class="font-medium text-gray-500 text-xs">{formattedDate(postedAt)}</p>
+			</div>
+		</a>
 	{/if}
 </div>
