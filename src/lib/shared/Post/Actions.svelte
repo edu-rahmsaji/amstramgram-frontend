@@ -1,5 +1,6 @@
 <script lang="ts">
-	import {
+	import { page } from '$app/stores';
+import {
 		IconHeart as HeartIcon,
 		IconBookmark as BookmarkIcon,
 		IconArrowUpRight as GotoIcon
@@ -18,6 +19,8 @@
 			</div>
 			<BookmarkIcon />
 		</div>
-		<a href="/posts/{id}" class="flex gap-2 border-bottom-2 border-black">Open <GotoIcon /></a>
+		{#if $page.url.pathname !== `/posts/${id}`}
+			<a href="/posts/{id}" class="flex gap-2 border-bottom-2 border-black">Open <GotoIcon /></a>
+		{/if}
 	</div>
 </div>

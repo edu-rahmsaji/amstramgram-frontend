@@ -1,9 +1,26 @@
 <script lang="ts">
 	import { IconArrowNarrowLeft } from '@tabler/icons-svelte';
-	import type { PageData } from './$types';
+	import type { PageData } from './$types.js';
 	import Post from '$lib/shared/Post/Post.svelte';
+	import { PUBLIC_BACKEND_URL } from '$env/static/public';
+	import type { ApiResponse } from '$models/ApiResponse.js';
 
 	export let data: PageData;
+
+	const destroy = async () => {
+		const response = await fetch(`${PUBLIC_BACKEND_URL}/api/posts/${data.post?.id}`, {
+			method: 'DELETE'
+		});
+
+		const result: ApiResponse = await response.json();
+
+		if (!result.success) {
+			alert(result.message);
+			return;
+		}
+
+		history.back();
+	};
 </script>
 
 <nav class="relative w-full min-h-[60px] px-5 flex justify-start items-center z-50">
@@ -19,9 +36,6 @@
 	<Post post={data.post} />
 	{#if data.post.user.id}
 		<a href="/posts/{data.post.id}/edit">Edit this post</a>
-		<form method="post">
-			<input type="hidden" name="_method" value="delete" />
-			<button type="submit">Delete this post</button>
-		</form>
+		<button on:click={destroy}>Delete this post</button>
 	{/if}
 {/if}
