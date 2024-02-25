@@ -1,11 +1,9 @@
-import type { Post } from '$models/Post';
+import type { Post } from '$models/Post.js';
 import { redirect } from '@sveltejs/kit';
-import type { PageServerLoad } from './$types';
-import type { User } from '$models/User';
+import type { PageServerLoad } from './$types.js';
+import type { User } from '$models/User.js';
 import { PUBLIC_BACKEND_URL } from '$env/static/public';
-
-const allowedTypeParams = ["", "text"] as const;
-export type TypeParam = typeof allowedTypeParams[number];
+import { allowedTypeParams, type TypeParam } from '$models/ProfilePostType.js';
 
 const getPosts = async (): Promise<Post[]> => {
 	const response = await fetch(`${PUBLIC_BACKEND_URL}/api/user/1/posts`);

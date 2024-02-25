@@ -1,6 +1,6 @@
 <script lang="ts">
-	import type { Post } from "$models/Post";
-	import type { TypeParam } from "../../routes/(app)/profile/+page.server";
+	import type { Post } from "$models/Post.js";
+	import type { TypeParam } from "$models/ProfilePostType.js";
 	import Pics from "./Posts/Pics.svelte";
 	import Texts from "./Posts/Texts.svelte";
 

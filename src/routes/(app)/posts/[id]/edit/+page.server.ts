@@ -1,6 +1,6 @@
 import { PUBLIC_BACKEND_URL } from '$env/static/public';
-import type { Post } from '$models/Post';
-import type { PageServerLoad } from './$types';
+import type { Post } from '$models/Post.js';
+import type { PageServerLoad } from './$types.js';
 
 const getPost = async (id: string): Promise<Post> => {
 	const response = await fetch(`${PUBLIC_BACKEND_URL}/api/posts/${id}`);

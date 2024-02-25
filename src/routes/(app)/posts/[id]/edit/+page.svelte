@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { IconArrowNarrowLeft } from '@tabler/icons-svelte';
-	import type { PageData } from './$types';
+	import type { PageData } from './$types.js';
 	import Post from '$lib/shared/Post/Post.svelte';
 
 	export let data: PageData;

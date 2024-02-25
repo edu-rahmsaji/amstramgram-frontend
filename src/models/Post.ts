@@ -1,4 +1,4 @@
-import type { SimplifiedUser } from "./User";
+import type { SimplifiedUser } from "./User.js";
 
 export interface Post {
 	id: number;

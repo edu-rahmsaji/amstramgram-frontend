@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { PUBLIC_BACKEND_URL } from '$env/static/public';
-	import { onMount } from 'svelte';
 
 	export let text: string;
 	export let imagePaths: string[];

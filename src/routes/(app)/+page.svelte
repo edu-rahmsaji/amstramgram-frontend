@@ -1,7 +1,7 @@
 <script lang="ts">
 	import Post from '$lib/shared/Post/Post.svelte';
 	import { onMount } from 'svelte';
-	import type { PageData } from './$types';
+	import type { PageData } from './$types.js';
 
 	export let data: PageData;
 

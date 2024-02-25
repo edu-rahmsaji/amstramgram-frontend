@@ -1,7 +1,6 @@
 <script lang="ts">
-	import type { PageData } from './$types';
+	import type { PageData } from './$types.js';
 	import { onMount } from 'svelte';
-	import Nav from '$lib/profile/Nav.svelte';
 	import UserInfo from '$lib/profile/UserInfo.svelte';
 	import PostTypeSelection from '$lib/profile/PostTypeSelection.svelte';
 	import Content from '$lib/profile/Content.svelte';

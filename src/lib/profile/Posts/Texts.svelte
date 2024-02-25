@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { Post } from '$models/Post';
+	import type { Post } from '$models/Post.js';
 	import { IconHeart } from '@tabler/icons-svelte';
 
 	export let texts: Post[];

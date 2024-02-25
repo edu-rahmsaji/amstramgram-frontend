@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { SimplifiedUser } from '$models/User';
+	import type { SimplifiedUser } from '$models/User.js';
 
 	export let user: SimplifiedUser | null;
 	export let postedAt: Date;

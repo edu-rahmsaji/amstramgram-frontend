@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { Post } from '$models/Post';
+	import type { Post } from '$models/Post.js';
 	import { PUBLIC_BACKEND_URL } from '$env/static/public';
 
 	export let pics: Post[];

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { Post } from '$models/Post';
+	import type { Post } from '$models/Post.js';
 	import UserData from './UserData.svelte';
 	import Content from './Content.svelte';
 	import Actions from './Actions.svelte';

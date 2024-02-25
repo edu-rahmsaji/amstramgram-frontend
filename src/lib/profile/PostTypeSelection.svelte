@@ -1,6 +1,6 @@
 <script lang="ts">
-	import type { TypeParam } from '../../routes/(app)/profile/+page.server';
 	import { page } from '$app/stores';    
+	import type { TypeParam } from '$models/ProfilePostType.js';
 
 	export let type: TypeParam;
 

@@ -1,2 +1,2 @@
-<h1>Chat</h1>
+<h1>Explore</h1>
 <p>Not implemented yet...</p>

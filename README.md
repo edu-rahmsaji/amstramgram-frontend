@@ -1,38 +1,25 @@
-# create-svelte
+# Amstramgram Frontend
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
+This repository contains the frontend implementation for the Amstramgram project.
 
-## Creating a project
+## Getting Started
 
-If you're seeing this, you've probably already done this step. Congrats!
+1. Install the dependencies
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
-
-# create a new project in my-app
-npm create svelte@latest my-app
+```ps1
+npm install
 ```
 
-## Developing
+2. Set up the environment variables. Set the port to the one you chose for the backend.
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+```env
+PUBLIC_BACKEND_URL="http://localhost:<port>"
+```
 
-```bash
+3. Run the development server
+
+```ps1
 npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
 ```
 
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+4. Open the website in a browser at [localhost:5173](http://localhost:5173)

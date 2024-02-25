@@ -1,8 +1,8 @@
 import { PUBLIC_BACKEND_URL } from '$env/static/public';
-import type { Post } from '$models/Post';
+import type { Post } from '$models/Post.js';
 import { redirect, type Actions } from '@sveltejs/kit';
-import type { PageServerLoad } from './$types';
-import type { ApiResponse } from '$models/ApiResponse';
+import type { PageServerLoad } from './$types.js';
+import type { ApiResponse } from '$models/ApiResponse.js';
 
 const getPost = async (id: string): Promise<Post> => {
 	const response = await fetch(`${PUBLIC_BACKEND_URL}/api/posts/${id}`);

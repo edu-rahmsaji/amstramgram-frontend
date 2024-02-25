@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { User } from '$models/User';
+	import type { User } from '$models/User.js';
 
 	export let user: User;
 	$: ({ nickname, firstName, lastName, meta, biography } = user);
@@ -19,10 +19,10 @@
             <span class="text-white text-2xl">{meta.followingCount}</span>
             <span class="text-gray-400">following</span>
         </div>
-        <div class="relative flex flex-col items-center">
+        <a href="/profile/followers" class="relative flex flex-col items-center">
             <span class="text-white text-2xl">{meta.followerCount}</span>
             <span class="text-gray-400">followers</span>
-        </div>
+        </a>
 	</div>
 	<p class="text-white text-sm text-justify">{biography}</p>
 </div>
